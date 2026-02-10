@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anita Shinde | Business Intelligence Leader</title>
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+:root{
+  --bg:#070b14;
+  --card:#0f1624;
+  --gold:#f2b632;
+  --text:#cbd5e1;
+  --white:#ffffff;
+  --glow:rgba(242,182,50,0.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:radial-gradient(circle at top,#0b1220,#070b14 70%);
+  color:var(--text);
+  line-height:1.7;
+}
+header{
+  position:fixed;top:0;width:100%;z-index:100;
+  background:rgba(7,11,20,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+nav{
+  max-width:1200px;margin:auto;
+  padding:14px 24px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.logo{color:var(--gold);font-weight:700;font-size:20px}
+nav a{color:#94a3b8;text-decoration:none;margin-left:22px;font-size:14px}
+nav a:hover{color:var(--gold)}
+
+section{
+  min-height:100vh;
+  padding:120px 24px 80px;
+  display:flex;align-items:center;
+}
+.container{max-width:1200px;margin:auto;width:100%}
+
+/* TITLES */
+.section-title span{color:var(--gold);letter-spacing:3px;font-size:12px}
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  font-size:56px;color:var(--white);
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.3fr 0.9fr;
+  gap:40px;
+  align-items:center;
+}
+.tag{letter-spacing:3px;color:var(--gold);font-size:12px}
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:64px;color:var(--white);line-height:1.1;
+}
+h1 span{color:var(--gold)}
+.hero p{max-width:520px;margin:20px 0}
+
+.stats{display:flex;gap:40px;margin-top:30px}
+.stat strong{color:var(--gold);font-size:30px}
+
+/* PROFILE IMAGE */
+.photo{
+  width:340px;height:340px;border-radius:50%;
+  margin-left:auto;margin-right:-60px;
+  justify-self:end;
+  border:6px solid rgba(242,182,50,0.3);
+  box-shadow:0 0 70px var(--glow);
+  overflow:hidden;
+}
+.photo img{
+  width:100%;height:100%;
+  object-fit:cover;border-radius:50%;
+}
+
+/* LIST */
+.fancy-list{list-style:none;margin-top:20px}
+.fancy-list li{
+  display:flex;gap:12px;margin-bottom:10px
+}
+.fancy-list i{color:var(--gold);margin-top:4px}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:26px;margin-top:40px
+}
+.card{
+  background:linear-gradient(180deg,#0f1624,#0a1020);
+  border-radius:18px;padding:30px;
+}
+.card i{font-size:30px;color:var(--gold);margin-bottom:14px}
+.card h3{color:var(--white);margin-bottom:10px}
+
+/* SKILLS */
+.skill{margin-bottom:18px}
+.skill span{float:right;color:var(--gold)}
+.bar{height:8px;background:#1e293b;border-radius:6px;margin-top:6px}
+.fill{height:100%;background:linear-gradient(90deg,#f2b632,#ffd56b);border-radius:6px}
+
+/* TIMELINE */
+.timeline{
+  border-left:2px solid rgba(242,182,50,0.4);
+  padding-left:30px;margin-top:40px
+}
+.job{margin-bottom:40px}
+.job h3{color:var(--white)}
+.job span{color:var(--gold);font-size:13px}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:26px;margin-top:40px
+}
+.contact-card{
+  background:var(--card);
+  padding:28px;border-radius:16px;text-align:center
+}
+.contact-card i{font-size:28px;color:var(--gold);margin-bottom:10px}
+
+footer{text-align:center;padding:30px;color:#64748b}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;text-align:center}
+  .photo{margin:auto}
+  .stats{justify-content:center}
+}
+
+/* PRINT */
+@media print{
+  header{position:static}
+  section{page-break-after:always}
+  section:last-of-type{page-break-after:auto}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <div class="logo">AS</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#cert">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+<div class="container hero">
+  <div>
+    <div class="tag">BUSINESS INTELLIGENCE LEADER</div>
+    <h1>Anita <span>Shinde</span></h1>
+    <p>Transforming data into strategic advantage using BI, analytics and AI-powered insights.</p>
+
+    <div class="stats">
+      <div class="stat"><strong>12+</strong><br>Years</div>
+      <div class="stat"><strong>25+</strong><br>Projects</div>
+      <div class="stat"><strong>5+</strong><br>Industries</div>
+    </div>
+
+    <ul class="fancy-list">
+      <li><i class="fa-solid fa-graduation-cap"></i>M.E. – Mumbai University</li>
+      <li><i class="fa-solid fa-graduation-cap"></i>B.E. – Pune University</li>
+      <li><i class="fa-solid fa-graduation-cap"></i>Diploma – MSBTE</li>
+    </ul>
+  </div>
+
+  <div class="photo">
+    <img src="profile.jpg" alt="Anita Shinde">
+  </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<div class="section-title">
+  <span>ABOUT</span>
+  <h2>Turning Data Into <span style="color:var(--gold)">Business Impact</span></h2>
+</div>
+
+<div class="grid">
+  <div class="card"><i class="fa-solid fa-chart-line"></i><h3>BI Leadership</h3><p>Leading enterprise Power BI programs at Accenture.</p></div>
+  <div class="card"><i class="fa-solid fa-robot"></i><h3>AI Tools</h3><p>ChatGPT, Gemini, Copilot expert.</p></div>
+  <div class="card"><i class="fa-solid fa-table"></i><h3>Advanced Excel</h3><p>Automation, Power Query & Pivot.</p></div>
+  <div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud Analytics</h3><p>Azure, Snowflake, SQL.</p></div>
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="container">
+<div class="section-title"><span>SKILLS</span><h2>Technical Expertise</h2></div>
+
+<div class="grid">
+<div class="card">
+  <div class="skill">Power BI <span>95%</span><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+  <div class="skill">Tableau <span>88%</span><div class="bar"><div class="fill" style="width:88%"></div></div></div>
+  <div class="skill">Excel <span>92%</span><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+</div>
+<div class="card">
+  <div class="skill">Azure / Snowflake <span>85%</span><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+  <div class="skill">SQL / DAX <span>90%</span><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+  <div class="skill">Python <span>75%</span><div class="bar"><div class="fill" style="width:75%"></div></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE PAGE 1 -->
+<section id="experience">
+<div class="container">
+<div class="section-title"><span>CAREER</span><h2>Professional Experience</h2></div>
+
+<div class="timeline">
+<div class="job">
+<h3>Accenture – Team Lead (Power BI)</h3>
+<span>2024 – Present</span>
+<ul class="fancy-list">
+<li><i class="fa-solid fa-check"></i>Leading enterprise BI solutions</li>
+<li><i class="fa-solid fa-check"></i>Executive dashboards & governance</li>
+<li><i class="fa-solid fa-check"></i>AI-assisted analytics</li>
+</ul>
+</div>
+
+<div class="job">
+<h3>Synergy Group – Lead Data Analyst</h3>
+<span>2022 – 2024</span>
+<ul class="fancy-list">
+<li><i class="fa-solid fa-check"></i>End-to-end BI delivery</li>
+<li><i class="fa-solid fa-check"></i>Automation & self-service models</li>
+</ul>
+</div>
+</div>
+
+<div style="text-align:right;margin-top:30px">
+<a href="#experience-continued" style="color:var(--gold)">Continue →</a>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE CONTINUED -->
+<section id="experience-continued">
+<div class="container">
+<div class="section-title"><span>CAREER</span><h2>Earlier Experience</h2></div>
+
+<div class="timeline">
+<div class="job">
+<h3>Immenso Software – Senior BI Developer</h3>
+<span>2021 – 2022</span>
+<ul class="fancy-list">
+<li><i class="fa-solid fa-check"></i>Power BI & Azure SQL</li>
+<li><i class="fa-solid fa-check"></i>Advanced DAX & modeling</li>
+</ul>
+</div>
+
+<div class="job">
+<h3>Planet Technology – Data Analyst</h3>
+<span>2019 – 2021</span>
+<ul class="fancy-list">
+<li><i class="fa-solid fa-check"></i>MIS & reporting dashboards</li>
+<li><i class="fa-solid fa-check"></i>SQL & ad-hoc analysis</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="cert">
+<div class="container">
+<div class="section-title"><span>LEARNING</span><h2>Certifications & Training</h2></div>
+<div class="grid">
+<div class="card"><i class="fa-brands fa-microsoft"></i><h3>Microsoft</h3><p>PL-300, AI-900</p></div>
+<div class="card"><i class="fa-solid fa-robot"></i><h3>AI & ML</h3><p>Machine Learning</p></div>
+<div class="card"><i class="fa-solid fa-chart-pie"></i><h3>BI Tools</h3><p>Power BI, Tableau</p></div>
+<div class="card"><i class="fa-brands fa-python"></i><h3>Python</h3><p>Analytics</p></div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<div class="section-title"><span>CONTACT</span><h2>Get In Touch</h2></div>
+<div class="contact-grid">
+<div class="contact-card"><i class="fa-solid fa-envelope"></i><p>anitapowerbi@gmail.com</p></div>
+<div class="contact-card"><i class="fa-solid fa-phone"></i><p>+91 9702435673</p></div>
+<div class="contact-card"><i class="fa-brands fa-linkedin"></i><p>LinkedIn</p></div>
+<div class="contact-card"><i class="fa-brands fa-github"></i><p>GitHub</p></div>
+</div>
+</div>
+</section>
+
+<footer>© 2026 Anita Shinde • Business Intelligence Leader</footer>
+</body>
+</html>
