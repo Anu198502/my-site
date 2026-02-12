@@ -5,325 +5,344 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anita Shinde | Lead BI Consultant</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 :root{
---bg:#071018;
---card:#0f1b2b;
---accent:#19d3da;
---text:#cbd5e1;
---white:#ffffff;
+  --bg:#071018;
+  --card:#0f1b2b;
+  --accent:#19d3da;
+  --text:#cbd5e1;
+  --white:#ffffff;
 }
-
-*{margin:0;padding:0;box-sizing:border-box}
-
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
-font-family:'Poppins',sans-serif;
-background:radial-gradient(circle at 20% 20%, #0a1a2a, #071018 60%);
-color:var(--text);
-scroll-behavior:smooth;
-overflow-x:hidden;
+  font-family:'Poppins',sans-serif;
+  background: #071018;
+  color: var(--text);
+  scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* ===== AI Background ===== */
-.bg-effect{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:url("effect.png") center center no-repeat;
-background-size:cover;
-opacity:0.08;
-z-index:-3;
-animation:floatBg 20s infinite alternate ease-in-out;
+/* AI Neural Canvas */
+#ai-canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
 }
 
-@keyframes floatBg{
-0%{transform:scale(1);}
-50%{transform:scale(1.05);}
-100%{transform:scale(1.02);}
-}
-
-/* ===== Particles ===== */
-canvas{
-position:fixed;
-top:0;
-left:0;
-z-index:-2;
-}
-
-/* ===== Cursor Glow ===== */
-.cursor-glow{
-position:fixed;
-width:150px;
-height:150px;
-background:radial-gradient(circle, rgba(25,211,218,0.4) 0%, transparent 70%);
-border-radius:50%;
-pointer-events:none;
-z-index:-1;
-transform:translate(-50%, -50%);
-}
-
-/* ===== Header ===== */
+/* Header */
 header{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(7,16,24,0.9);
-backdrop-filter:blur(10px);
-padding:15px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
+  position:fixed;
+  top:0;
+  width:100%;
+  background: rgba(7,16,24,0.6);
+  backdrop-filter: blur(10px);
+  padding:15px 40px;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(25,211,218,0.1);
 }
-
 header .logo{
-color:var(--accent);
-font-weight:700;
-font-size:20px;
+  color:var(--accent);
+  font-weight:700;
+  font-size:22px;
 }
-
 header nav a{
-color:#94a3b8;
-margin-left:20px;
-text-decoration:none;
-font-size:14px;
+  color:#94a3b8;
+  margin-left:25px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
 }
 header nav a:hover{color:var(--accent);}
 
-/* ===== Sections ===== */
-section{
-padding:120px 40px;
-min-height:100vh;
-opacity:0;
-transform:translateY(40px);
-transition:all 1s ease;
-}
-section.show{
-opacity:1;
-transform:translateY(0);
-}
+/* Sections */
+section{padding:120px 40px;min-height:100vh;position:relative;z-index:1;}
+.section-title span{color:var(--accent);letter-spacing:3px;font-size:13px;}
+.section-title h2{font-size:40px;color:var(--white);margin-top:10px;margin-bottom:40px;}
 
-h2{
-color:var(--white);
-margin-bottom:30px;
-font-size:34px;
-}
-
-/* ===== Hero ===== */
-.hero{
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.hero-text{
-max-width:600px;
-}
-
-.hero-text h1{
-font-size:48px;
-color:var(--white);
-}
-
-.hero-text span{
-color:var(--accent);
-}
-
-.hero-text p{
-margin-top:15px;
-line-height:1.6;
-}
-
-.hero-img{
-width:260px;
-height:260px;
-border-radius:50%;
-overflow:hidden;
-border:5px solid rgba(25,211,218,0.4);
-box-shadow:0 0 30px rgba(25,211,218,0.5);
-}
-
-.hero-img img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.social-icons{
-margin-top:20px;
-}
-
+/* Hero */
+.hero{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.hero-text{max-width:600px;backdrop-filter: blur(6px);background: rgba(15,27,43,0.6);padding:20px;border-radius:12px;}
+.hero-text h1{font-size:64px;color:var(--white);}
+.hero-text h1 span{color:var(--accent);}
+.hero-text p{margin-top:20px;font-size:18px;}
+.social-icons{margin-top:30px;}
 .social-icons a{
-display:inline-block;
-margin-right:15px;
-font-size:18px;
-color:var(--accent);
+  display:inline-block;margin-right:15px;width:45px;height:45px;
+  line-height:45px;text-align:center;border-radius:50%;
+  background:var(--card);color:var(--accent);font-size:18px;transition:0.3s;
+}
+.social-icons a:hover{background:var(--accent);color:#000;}
+.hero-img{
+  width:300px;height:300px;border-radius:50%;
+  overflow:hidden;border:6px solid rgba(25,211,218,0.3);
+  box-shadow:0 0 40px rgba(25,211,218,0.4);
+}
+.hero-img img{width:100%;height:100%;object-fit:cover;}
+
+/* Cards */
+.summary-grid, .project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.summary-card, .project-card{
+  background: rgba(15,27,43,0.6);
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 0 30px rgba(0,0,0,0.4);
+  transition:0.3s;
+  backdrop-filter: blur(6px);
+}
+.summary-card:hover, .project-card:hover{transform:translateY(-8px);}
+.summary-card i, .project-card i{
+  font-size:28px;
+  color:var(--accent);
+  margin-bottom:12px;
+}
+.summary-card h3, .project-card h3{
+  color:var(--white);
+  margin-bottom:10px;
 }
 
-/* ===== Cards ===== */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+/* Timeline */
+.timeline{position:relative;margin-top:40px;}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:var(--accent);
+  transform:translateX(-50%);
 }
-
-.card{
-background:rgba(15,27,43,0.9);
-padding:25px;
-border-radius:15px;
-box-shadow:0 0 25px rgba(0,0,0,0.4);
-transition:0.3s;
-}
-.card:hover{transform:translateY(-6px);}
-
-.card h3{color:var(--white);margin-bottom:10px;}
-.card i{color:var(--accent);margin-bottom:10px;}
-
-.counter{
-font-size:42px;
-color:var(--accent);
-font-weight:700;
-}
-
-/* ===== Timeline ===== */
-.timeline{
-position:relative;
-}
-.timeline:before{
-content:"";
-position:absolute;
-left:50%;
-width:4px;
-background:var(--accent);
-top:0;
-bottom:0;
-}
-.timeline-item{
-width:50%;
-padding:20px 40px;
-position:relative;
-}
+.timeline-item{width:50%;padding:20px 40px;position:relative;}
 .timeline-item:nth-child(odd){left:0;}
 .timeline-item:nth-child(even){left:50%;}
 .timeline-content{
-background:rgba(15,27,43,0.9);
-padding:20px;
-border-radius:12px;
+  background: rgba(15,27,43,0.6);
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
 }
 .timeline-content h3{color:var(--white);}
 .timeline-content span{color:var(--accent);font-size:14px;}
-.timeline-content ul{padding-left:18px;margin-top:10px;}
+.timeline-content ul{margin-top:10px;padding-left:18px;}
 
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:var(--accent);
-color:#000;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-margin-top:20px;
+/* Footer */
+footer{text-align:center;padding:30px;color:#64748b;}
+
+/* Floating AI Chat Bolt */
+#ai-bolt{
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  width:60px;
+  height:60px;
+  background:var(--accent);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#000;
+  font-size:28px;
+  cursor:pointer;
+  box-shadow:0 0 20px rgba(25,211,218,0.6);
+  z-index:10000;
+  transition:0.3s;
+}
+#ai-bolt:hover{transform:scale(1.1);}
+
+/* AI Chat Window */
+#ai-chat{
+  position:fixed;
+  bottom:100px;
+  right:30px;
+  width:300px;
+  max-height:400px;
+  background: rgba(15,27,43,0.95);
+  backdrop-filter: blur(8px);
+  border-radius:15px;
+  box-shadow:0 0 30px rgba(25,211,218,0.7);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:10001;
+}
+#ai-chat-header{
+  padding:12px 15px;
+  background: rgba(25,211,218,0.2);
+  color:var(--accent);
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(25,211,218,0.4);
+}
+#ai-chat-header i{cursor:pointer;}
+#ai-chat-messages{
+  flex:1;
+  padding:10px;
+  overflow-y:auto;
+  font-size:14px;
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+}
+.ai-message{
+  margin-bottom:10px;
+  padding:6px 10px;
+  background: rgba(25,211,218,0.1);
+  border-radius:10px;
+  display:inline-block;
+  max-width:80%;
+}
+.user-message{
+  background: rgba(25,211,218,0.8);
+  color:#000;
+  align-self:flex-end;
+}
+#ai-chat-input{
+  display:flex;
+  padding:8px;
+  border-top:1px solid rgba(25,211,218,0.4);
+}
+#ai-chat-input input{
+  flex:1;
+  padding:6px 10px;
+  border:none;
+  border-radius:8px;
+  background: rgba(0,0,0,0.3);
+  color:#fff;
+  outline:none;
+}
+#ai-chat-input button{
+  margin-left:6px;
+  background:var(--accent);
+  border:none;
+  color:#000;
+  padding:6px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+#ai-chat-input button:hover{
+  background:#0ff;
 }
 
-footer{
-text-align:center;
-padding:20px;
-color:#64748b;
-}
-
+/* Responsive Timeline */
 @media(max-width:900px){
-.hero{flex-direction:column;text-align:center;}
-.hero-img{margin-top:30px;}
-.timeline:before{left:10px;}
-.timeline-item{width:100%;left:0;padding-left:40px;}
+  .timeline::before{left:20px;}
+  .timeline-item{width:100%;padding-left:60px;}
+  .timeline-item:nth-child(even){left:0;}
 }
-
+@media(max-width:768px){
+  .hero-text h1{font-size:40px;}
+  .hero-img{width:200px;height:200px;}
+}
 </style>
 </head>
 
 <body>
 
-<div class="bg-effect"></div>
-<canvas id="particles"></canvas>
-<div class="cursor-glow" id="cursorGlow"></div>
+<!-- AI Neural Canvas -->
+<canvas id="ai-canvas"></canvas>
 
 <header>
 <div class="logo">AS</div>
 <nav>
 <a href="#home">Home</a>
-<a href="#about">About</a>
+<a href="#summary">About</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#education">Education</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
-<!-- HERO -->
+<!-- Hero Section -->
 <section id="home">
 <div class="hero">
-
 <div class="hero-text">
 <h1>Anita <span>Shinde</span></h1>
 <p>
-Lead Business Intelligence Consultant with 12+ years of experience delivering 
-enterprise-grade dashboards, KPI governance frameworks, Azure SQL integrations, 
-Snowflake data modeling and executive analytics solutions across Finance, 
-Supply Chain and CRM domains.
+12+ Years of Professional Experience in Business Intelligence & Data Analytics.
+Expert in Power BI, Tableau, Azure SQL, Snowflake, ETL, Data Warehousing,
+KPI Framework Design, Row-Level Security, and Enterprise BI Strategy.
+Delivered 25+ analytics projects.
 </p>
-
 <div class="social-icons">
+<a href="https://www.linkedin.com/in/anita-shinde-147544168" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://github.com/anitaplus?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
 <a href="mailto:anitapowerbi@gmail.com"><i class="fas fa-envelope"></i></a>
 <a href="tel:+919702435673"><i class="fas fa-phone"></i></a>
-<a href="https://www.linkedin.com/in/anita-shinde-147544168" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://github.com/anitaplus" target="_blank"><i class="fab fa-github"></i></a>
 </div>
-
-<a href="resume.pdf" download class="btn">Download Resume</a>
 </div>
-
 <div class="hero-img">
-<img src="profile.jpg" alt="Anita">
+<img src="profile.jpg" alt="Anita Shinde Profile Photo">
 </div>
-
-</div>
-
-<div class="grid" style="margin-top:60px;">
-<div class="card"><div class="counter" data-target="12">0</div>Years Experience</div>
-<div class="card"><div class="counter" data-target="25">0</div>Projects Delivered</div>
-<div class="card"><div class="counter" data-target="5">0</div>Industry Domains</div>
 </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-<h2>Professional Expertise</h2>
-<div class="grid">
-<div class="card"><h3>Power BI Leadership</h3><p>Enterprise dashboards, RLS implementation, On-Prem Gateway, KPI frameworks.</p></div>
-<div class="card"><h3>Data Engineering</h3><p>Azure SQL, Snowflake, ETL, Data Modeling, Data Cleansing.</p></div>
-<div class="card"><h3>Advanced Analytics</h3><p>DAX optimization, forecasting models, business performance insights.</p></div>
+<!-- Summary -->
+<section id="summary">
+<div class="section-title">
+<span>ABOUT ME</span>
+<h2>Professional Summary</h2>
+</div>
+<div class="summary-grid">
+<div class="summary-card">
+<i class="fas fa-briefcase"></i>
+<h3>12+ Years</h3>
+<p>Business Intelligence | Data Modeling | ETL | Data Strategy</p>
+</div>
+<div class="summary-card">
+<i class="fas fa-chart-line"></i>
+<h3>25+ Projects</h3>
+<p>Finance | Supply Chain | CRM | Predictive Analytics</p>
+</div>
+<div class="summary-card">
+<i class="fas fa-database"></i>
+<h3>Power BI Expert</h3>
+<p>DAX | RLS | Dataflows | Gateway | Service Deployment</p>
+</div>
+<div class="summary-card">
+<i class="fas fa-brain"></i>
+<h3>AI & ML</h3>
+<p>Machine Learning | NLP | Deep Learning | Python</p>
+</div>
 </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- Experience -->
 <section id="experience">
+<div class="section-title">
+<span>CAREER</span>
 <h2>Work Experience</h2>
+</div>
 <div class="timeline">
 <div class="timeline-item">
 <div class="timeline-content">
-<span>Feb 2024 – Present</span>
-<h3>Accenture – Team Lead (Power BI App Development)</h3>
+<span>12 Feb 2024 – Present</span>
+<h3>Team Lead – Power BI App Development | Accenture</h3>
 <ul>
-<li>Lead cross-functional analytics teams</li>
-<li>Define KPI measurement frameworks</li>
-<li>Implement RLS & workspace governance</li>
-<li>Manage On-Prem Data Gateway</li>
+<li>Lead analytics team & KPI frameworks.</li>
+<li>RLS & security management.</li>
+<li>On-Prem Gateway configuration.</li>
+<li>Enterprise dashboard governance.</li>
 </ul>
 </div>
 </div>
@@ -331,51 +350,141 @@ Supply Chain and CRM domains.
 <div class="timeline-item">
 <div class="timeline-content">
 <span>Sep 2022 – Jan 2024</span>
-<h3>Lead Data Analyst</h3>
+<h3>Lead Data Analyst | Synergy Group</h3>
 <ul>
-<li>Client stakeholder management</li>
-<li>Cloud & on-prem refresh strategy</li>
-<li>Power BI & Tableau dashboard delivery</li>
+<li>Project strategy & dashboard development.</li>
+<li>Cloud & On-Prem refresh management.</li>
 </ul>
 </div>
 </div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<span>Feb 2021 – Aug 2022</span>
+<h3>Sr. BI Developer | Immenso Software</h3>
+<ul>
+<li>Forecasting dashboards.</li>
+<li>Advanced DAX modeling.</li>
+</ul>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<span>Jan 2019 – Jan 2021</span>
+<h3>Data Analyst | Planet Technology</h3>
+</div>
+</div>
 </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- Projects -->
 <section id="projects">
-<h2>Project Highlights</h2>
-<div class="grid">
-<div class="card">
+<div class="section-title">
+<span>PROJECTS</span>
+<h2>Project Summary</h2>
+</div>
+<div class="project-grid">
+<div class="project-card">
+<i class="fas fa-ship"></i>
 <h3>Vessel Accounts</h3>
-<p>Lead Business Analyst – BRD/FRD documentation, data cleansing, DAX measures, RLS and executive dashboards.</p>
+<p>Lead BA – BI | BRD, FRD, DAX, RLS, Dashboard Publishing</p>
 </div>
-
-<div class="card">
+<div class="project-card">
+<i class="fas fa-coins"></i>
 <h3>Cost Overview – Finance</h3>
-<p>Azure SQL & Snowflake integration, Budget vs Expense analysis, KPI dashboards & governance implementation.</p>
+<p>Azure SQL, Snowflake, Budget KPI, Security Setup</p>
 </div>
-
-<div class="card">
+<div class="project-card">
+<i class="fas fa-truck"></i>
 <h3>Supply Chain Analytics</h3>
-<p>Buyer performance tracking, order monitoring, interactive Power BI reporting.</p>
+<p>Buyer Tracking & Order Monitoring</p>
 </div>
-
-<div class="card">
-<h3>CRM Dashboard (USA Client)</h3>
-<p>Sales performance tracking, revenue analytics, structured data transformation.</p>
+<div class="project-card">
+<i class="fas fa-users"></i>
+<h3>CRM Analytics</h3>
+<p>USA Client | Executive BI Dashboards</p>
 </div>
 </div>
 </section>
 
-<!-- CONTACT -->
+<!-- Certifications -->
+<section id="certifications">
+<div class="section-title">
+<span>CREDENTIALS</span>
+<h2>Certifications</h2>
+</div>
+<div class="project-grid">
+<div class="project-card">
+<i class="fas fa-award"></i>
+<h3>Microsoft</h3>
+<p>PL-300 | AI-900</p>
+</div>
+<div class="project-card">
+<i class="fas fa-chart-bar"></i>
+<h3>IBM & Data Science</h3>
+<p>Python | Open Source Tools</p>
+</div>
+<div class="project-card">
+<i class="fas fa-brain"></i>
+<h3>Machine Learning</h3>
+<p>Udemy | AI Programs</p>
+</div>
+</div>
+</section>
+
+<!-- Education -->
+<section id="education">
+<div class="section-title">
+<span>ACADEMICS</span>
+<h2>Education</h2>
+</div>
+<div class="project-grid">
+<div class="project-card">
+<i class="fas fa-graduation-cap"></i>
+<h3>M.E.</h3>
+<p>Mumbai University – 2012</p>
+</div>
+<div class="project-card">
+<i class="fas fa-university"></i>
+<h3>B.E.</h3>
+<p>Pune University – 2007</p>
+</div>
+<div class="project-card">
+<i class="fas fa-school"></i>
+<h3>Diploma</h3>
+<p>MSBTE</p>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
 <section id="contact">
-<h2>Contact</h2>
-<div class="grid">
-<div class="card"><h3>Email</h3><p><a href="mailto:anitapowerbi@gmail.com" style="color:#19d3da;">anitapowerbi@gmail.com</a></p></div>
-<div class="card"><h3>Phone</h3><p><a href="tel:+919702435673" style="color:#19d3da;">+91 9702435673</a></p></div>
-<div class="card"><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/anita-shinde-147544168" target="_blank" style="color:#19d3da;">Visit Profile</a></p></div>
-<div class="card"><h3>GitHub</h3><p><a href="https://github.com/anitaplus" target="_blank" style="color:#19d3da;">Repositories</a></p></div>
+<div class="section-title">
+<span>CONNECT</span>
+<h2>Contact Details</h2>
+</div>
+<div class="project-grid">
+<div class="project-card">
+<i class="fas fa-envelope"></i>
+<h3>Email</h3>
+<p><a href="mailto:anitapowerbi@gmail.com" style="color:var(--text);text-decoration:none;">anitapowerbi@gmail.com</a></p>
+</div>
+<div class="project-card">
+<i class="fas fa-phone"></i>
+<h3>Phone</h3>
+<p><a href="tel:+919702435673" style="color:var(--text);text-decoration:none;">+91 9702435673</a></p>
+</div>
+<div class="project-card">
+<i class="fab fa-linkedin"></i>
+<h3>LinkedIn</h3>
+<p><a href="https://www.linkedin.com/in/anita-shinde-147544168" target="_blank" style="color:var(--text);text-decoration:none;">View Profile</a></p>
+</div>
+<div class="project-card">
+<i class="fab fa-github"></i>
+<h3>GitHub</h3>
+<p><a href="https://github.com/anitaplus?tab=repositories" target="_blank" style="color:var(--text);text-decoration:none;">View Repositories</a></p>
+</div>
 </div>
 </section>
 
@@ -383,81 +492,117 @@ Supply Chain and CRM domains.
 © 2026 Anita Shinde | Business Intelligence Leader
 </footer>
 
+<!-- Floating AI Chat Bolt -->
+<div id="ai-bolt"><i class="fas fa-robot"></i></div>
+
+<!-- AI Chat Window -->
+<div id="ai-chat">
+  <div id="ai-chat-header">
+    <span>AI Assistant</span>
+    <i id="ai-chat-close" class="fas fa-times"></i>
+  </div>
+  <div id="ai-chat-messages"></div>
+  <div id="ai-chat-input">
+    <input type="text" placeholder="Type your message..." id="chat-input-field"/>
+    <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<!-- Scripts -->
 <script>
+// AI Neural Canvas
+const canvas = document.getElementById('ai-canvas');
+const ctx = canvas.getContext('2d');
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+let nodes = [];
 
-/* Fade-in */
-const sections=document.querySelectorAll("section");
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add("show");}
-});
-},{threshold:0.2});
-sections.forEach(sec=>observer.observe(sec));
-
-/* Counters */
-const counters=document.querySelectorAll(".counter");
-const counterObserver=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-let counter=entry.target;
-let target=+counter.dataset.target;
-let count=0;
-let step=target/100;
-let interval=setInterval(()=>{
-count+=step;
-if(count>=target){
-counter.innerText=target;
-clearInterval(interval);
-}else{
-counter.innerText=Math.ceil(count);
-}
-},20);
-counterObserver.unobserve(counter);
-}
-});
-},{threshold:1});
-counters.forEach(c=>counterObserver.observe(c));
-
-/* Cursor Glow */
-const glow=document.getElementById("cursorGlow");
-document.addEventListener("mousemove",e=>{
-glow.style.left=e.clientX+"px";
-glow.style.top=e.clientY+"px";
+window.addEventListener('resize', ()=>{
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
 });
 
-/* Particles */
-const canvas=document.getElementById("particles");
-const ctx=canvas.getContext("2d");
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-
-let particles=[];
-for(let i=0;i<50;i++){
-particles.push({x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2,
-dx:(Math.random()-0.5),
-dy:(Math.random()-0.5)});
+class Node {
+  constructor(){
+    this.x = Math.random()*width;
+    this.y = Math.random()*height;
+    this.vx = (Math.random()-0.5)*0.5;
+    this.vy = (Math.random()-0.5)*0.5;
+  }
+  update(){
+    this.x += this.vx;
+    this.y += this.vy;
+    if(this.x<0||this.x>width) this.vx*=-1;
+    if(this.y<0||this.y>height) this.vy*=-1;
+  }
+  draw(){
+    ctx.fillStyle='rgba(25,211,218,0.5)';
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,2,0,Math.PI*2);
+    ctx.fill();
+  }
 }
+
+for(let i=0;i<100;i++) nodes.push(new Node());
 
 function animate(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-particles.forEach(p=>{
-ctx.beginPath();
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-ctx.fillStyle="#19d3da";
-ctx.fill();
-p.x+=p.dx;
-p.y+=p.dy;
-if(p.x<0||p.x>canvas.width)p.dx*=-1;
-if(p.y<0||p.y>canvas.height)p.dy*=-1;
-});
-requestAnimationFrame(animate);
+  ctx.clearRect(0,0,width,height);
+  nodes.forEach(n=>{
+    n.update();
+    n.draw();
+    nodes.forEach(m=>{
+      let dx = n.x - m.x;
+      let dy = n.y - m.y;
+      let dist = Math.sqrt(dx*dx + dy*dy);
+      if(dist<120){
+        ctx.strokeStyle='rgba(25,211,218,'+(1-dist/120)*0.3+')';
+        ctx.beginPath();
+        ctx.moveTo(n.x,n.y);
+        ctx.lineTo(m.x,m.y);
+        ctx.stroke();
+      }
+    });
+  });
+  requestAnimationFrame(animate);
 }
 animate();
 
+// AI Chat Bolt
+const aiBolt = document.getElementById('ai-bolt');
+const aiChat = document.getElementById('ai-chat');
+const aiClose = document.getElementById('ai-chat-close');
+const chatInput = document.getElementById('chat-input-field');
+const chatSend = document.getElementById('chat-send');
+const chatMessages = document.getElementById('ai-chat-messages');
+
+aiBolt.addEventListener('click', ()=> aiChat.style.display='flex');
+aiClose.addEventListener('click', ()=> aiChat.style.display='none');
+
+function sendMessage(){
+  const msg = chatInput.value.trim();
+  if(!msg) return;
+  const userMsg = document.createElement('div');
+  userMsg.classList.add('ai-message','user-message');
+  userMsg.textContent = msg;
+  chatMessages.appendChild(userMsg);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  chatInput.value = '';
+
+  // AI placeholder response
+  setTimeout(()=>{
+    const aiMsg = document.createElement('div');
+    aiMsg.classList.add('ai-message');
+    aiMsg.textContent = "Hello! I'm your AI assistant. I can answer questions about your portfolio.";
+    chatMessages.appendChild(aiMsg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 600);
+}
+
+chatSend.addEventListener('click', sendMessage);
+chatInput.addEventListener('keypress', e=>{if(e.key==='Enter') sendMessage();});
 </script>
 
 </body>
 </html>
+
 
